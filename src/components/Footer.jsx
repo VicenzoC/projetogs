@@ -1,11 +1,12 @@
-import { Container } from 'react-bootstrap';
+import Container from './Container';
 
 function Footer() {
   return (
-    <footer>
+    <footer className="bg-gray-100 py-6">
       <Container>
-        <p className="mb-0 text-center">
-          <i className="bi bi-c-circle me-1"></i> {new Date().getFullYear()} Hydroguard - Todos os direitos reservados
+        <p className="text-center text-gray-600">
+          <span className="inline-block mr-1">©</span> 
+          {new Date().getFullYear()} Hydroguard - Todos os direitos reservados
         </p>
       </Container>
     </footer>
