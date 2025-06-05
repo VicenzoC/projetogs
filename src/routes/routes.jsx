@@ -1,19 +1,40 @@
-import { createBrowserRouter } from "react-router";
-
-import Home from "./Home"
-import Login from "./Login"
-import Cadastrar from "./Cadastrar"
-import Sobre from "./Sobre"
-import Solucao from "./Solucao"
-import Error from "./Error"
+import { createBrowserRouter } from 'react-router';
+import Layout from '../components/Layout';
+import Cadastrar from './Cadastrar';
+import Error from './Error';
+import Home from './Home';
+import Login from './Login';
+import Sobre from './Sobre';
+import Solucao from './Solucao';
 
 const router = createBrowserRouter([
-    { path: "/", Component: Home },
-    { path: "/login", Component: Login },
-    { path: "/cadastrar", Component: Cadastrar },
-    { path: "/sobre", Component: Sobre },
-    { path: "/solucao", Component: Solucao },
-    { path: "*", Component: Error },
-  ]);
-  
-  export default router
+  {
+    path: '/',
+    element: <Layout />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Home />
+      },
+      {
+        path: 'login',
+        element: <Login />
+      },
+      {
+        path: 'cadastrar',
+        element: <Cadastrar />
+      },
+      {
+        path: 'solucao',
+        element: <Solucao />
+      },
+      {
+        path: 'sobre',
+        element: <Sobre />
+      }
+    ]
+  }
+]);
+
+export default router;
