@@ -38,13 +38,16 @@ function Navbar() {
           <Link to="/" className="px-4 py-2 rounded hover:bg-[#0055d4] transition text-white font-medium">
             Home
           </Link>
+          <Link to="/solucao" className="px-4 py-2 rounded hover:bg-[#0055d4] transition text-white font-medium">
+            Solução
+          </Link>
+          <Link to="/sobre" className="px-4 py-2 rounded hover:bg-[#0055d4] transition text-white font-medium">
+            Sobre
+          </Link>
           {usuario ? (
             <>
-              <Link to="/solucao" className="px-4 py-2 rounded hover:bg-[#0055d4] transition text-white font-medium">
-                Solução
-              </Link>
-              <Link to="/sobre" className="px-4 py-2 rounded hover:bg-[#0055d4] transition text-white font-medium">
-                Sobre
+              <Link to="/perfil" className="px-4 py-2 rounded hover:bg-[#0055d4] transition text-white font-medium">
+                Perfil
               </Link>
               <button 
                 onClick={handleLogout}
